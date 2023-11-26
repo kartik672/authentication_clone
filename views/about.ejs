@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about us</title>
+    <link rel="stylesheet" href="/stylesheets/about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+        <div id="navbar">
+            <div id="nav1">
+                <img id="logo" src="/images/ayushwebsitewithoutbg.png" alt="image">
+            </div>
+            <div id="nav2">
+                  <!-- <h3><button>Signup</button></h3> -->
+                  <a href="/" ><h3>Home</h3></a>
+                  <a href="about"><h3>about us</h3></a>
+                  <a href="contact"><h3>Contact</h3></a>
+                  <a href="store"><h3>Store</h3></a>
+                  <a href="signup"><h3>signup</h3></a>
+                  <i class="ri-menu-line"></i>
+            </div>
+        </div>
+        <div id="navforphone">
+            <a href="/" ><h3>Home</h3></a>
+            <a href="about"><h3>about us</h3></a>
+            <a href="contact"><h3>Contact</h3></a>
+            <a href="store"><h3>Store</h3></a>
+            <a href="signup"><h3>signup</h3></a>
+        </div>
+        <div id="content">
+            <div id="left">
+                <img src="/images/ayushphoto.jpg" alt="">
+            </div>
+            <div id="right">
+                <h1>Owner's note</h1>
+                <p>To all our precious customers</p>
+                <br>
+                <p>  Digii Destination is not just a brand, but an attempt to make customers
+                     feel the sense of value for money purchase for the most necessary
+                     gadget of today's world that is a mobile phone and it's related accessories . 
+                     Digii Destination has a pool of services to offer to it's customers in order 
+                     to give them not just one but number of reasons to shop from Digii. These 
+                     services and offers include ground breaking discounts, extended warranties 
+                     of upto six month on every purchase, free gifts, customer bonus points, pan-india
+                     delivery of products with hassle free payment gateways and return policies. For our customers
+                      shopping from Digii we aim to provide all solutions for their 
+                     mobile phones and accessories under one roof starting from 24x7 customer support system,
+                     repairing of all mobile phones and gadgets, exchange offers with bonuses, all modes of 
+                    payment facilities such as cash payment, NEFT,IMPS,RTGS,UPI, Debit cards and credit
+                    cards of all banks. We at Digii destination are commited to provide all customers an out of the
+                    world shopping experience and after sales services. This project is for customers and completely
+                    designed for customers and thus we wait your arrival to our digital gadget arena i.e The Digii Destination </p>
+                    
+                    <p>Wishing everyone good health and happiness</p>
+                    <br>
+                    <p>Regards</p>
+                    <P>Ayush Mishra</P>
+                    <p>Owner and managing Director : Digii Destination</p>
+            </div>
+        </div>
+    </div>
+    <script>
+    
+        const nav = document.getElementById('navforphone');
+        
+        function toggleNav() {
+          nav.classList.toggle('open'); 
+        }
+        // Get menu icon and nav elements
+        const menuIcon = document.querySelector('.ri-menu-line'); 
+        // const nav = document.getElementById('navforphone');
+        
+        // Add click event to menu icon
+        menuIcon.addEventListener('click', function() {
+        
+          // Toggle open class on nav 
+          nav.classList.toggle('open');
+        
+          // Toggle display of content
+          const content = document.getElementById('content');
+          content.style.display = content.style.display === 'none' ? 'flex' : 'none'; 
+        
+        });
+        // const menuIcon = document.querySelector('.menu-icon');
+        
+        menuIcon.addEventListener('click', () => {
+        
+          if(menuIcon.classList.contains('ri-menu-line')) {
+            menuIcon.classList.replace('ri-menu-line', 'ri-cross-line');
+          } else {
+            menuIcon.classList.replace('ri-cross-line', 'ri-menu-line'); 
+          }
+          
+          // Toggle menu open/closed
+        
+        });
+        
+        
+        </script>
+</body>
+</html>

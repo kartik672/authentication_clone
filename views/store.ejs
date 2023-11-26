@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>store</title>
+    <link rel="stylesheet" href="/stylesheets/store.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+<style>
+    *{
+    padding:0px;
+    margin:0px;
+    /* background-color: black; */
+}
+html,body{
+    height:100%;
+    width:100%;
+    box-sizing: border-box;
+    background-color: black;
+}
+#main{
+    height:100%;
+    width:100%;
+    /* background-color:black; */
+}
+#navbar{
+    height:120px;
+    width:100%;
+    background-color:black;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    color:white;
+    border-bottom:2px solid #dadada;
+    font-size:1vw;
+}
+#nav1 img{
+    width:100px;
+}
+#nav2{
+    display:flex;
+    gap:98px;
+    /* margin-right:10px; */
+    text-transform: uppercase;
+    padding:2.5vw;
+    
+}
+#nav2 h3:hover{
+    color:rgb(237, 51, 150);
+}
+#nav1{
+    margin-left:30px;
+}
+
+#nav2 a{
+    text-decoration:none;
+    color:white;
+}
+.ri-menu-line{
+    display:none;
+}
+#right h1{
+    text-decoration:underline;
+    text-decoration-color: #CE33D4;
+}
+@media (max-width:600px){
+
+    #navbar{
+        height:80px;
+        
+    }
+    #nav1{
+        justify-content: space-between;
+    }
+    #nav2 a{
+        display:none;
+
+    }
+    .ri-menu-line{
+        display:block;
+        font-size:8vw;
+        display: flex;
+        align-items:center;
+        justify-content:flex-end;
+    }
+   #nav1 img{
+    width:60px;
+   }
+    #content{
+        flex-direction: column;
+        /* position: relative; */
+    }
+    #left{
+        width:100%;
+        height:60%;
+        padding:1vw;
+        /* position: absolute; */
+        
+        
+    }
+    
+    #right{
+        width:90%;
+        height:40%;
+        /* padding-right:2vw; */
+        margin:0;
+        /* position:absolute; */
+        bottom:0px;
+        padding-right:3vw;
+      padding-left:2.5vw;
+        /* font-size:3vw; */
+      /* overflow-x: hidden; */
+      
+    }
+    #right p{
+      font-size:medium;
+    }
+  #right h1{
+    font-size:7vw;;
+    margin-bottom: 5vw;
+  }
+    
+    #page2 #heading h1{
+        font-size:7.5vw;
+        font-weight:600;
+    }
+    #heading {
+        height: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+      }
+      #content{
+        flex-direction: column;
+      }
+      #left img{
+        left: 100px;
+      }
+      /*to maintain a distance between heading AND brands padding is given*/
+      
+      
+}
+.container{
+    width:675px;
+    height:520px;
+    background-color: black;
+    margin-left:400px;
+    margin-top:80px;
+    border-radius: 15px;
+    box-shadow:4px 4px 50px #CE33D4;
+    padding:20px;
+    overflow-y:scroll;
+    color:white;
+
+}
+.container::-webkit-scrollbar{
+    display: none;
+}
+.container form{
+    width:100%;
+    border:1px solid white;
+    border-radius:4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.container form input{
+    border:0;
+    outline:0;
+    box-shadow: 0;
+    border-radius:4px;
+    width:100%;
+    font-size:16px;
+    font-weight: 600;
+    background-color:black ;
+    padding:8px 10px;
+    color:white
+}
+.container form i{
+    padding-left:10px;
+}
+.container .product{
+    display: flex;
+    padding:5px 6px;
+    /* margin-top:10px; */
+    margin-top:10px;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.672);
+    cursor:pointer
+}
+.container .product img{
+    width:60px;
+}
+.container .product h2{
+    margin-left:10px;
+}
+.product-list{
+    padding:15px 0;
+}
+.product-list .product h2{
+    font-family: 'Quicksand';
+    font-size: 16px;
+    font-weight: 900;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+/* chatgpt ka code given below for responsivness */
+
+
+
+@media (max-width: 600px) {
+    #navbar {
+        height: 80px;
+    }
+    #nav1 {
+        justify-content: space-between;
+    }
+    #nav2 a {
+        display: none;
+    }
+    .ri-menu-line {
+        display: block;
+        font-size: 8vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    #nav1 img {
+        width: 60px;
+    }
+    .container {
+        width: 80%;
+        height: auto;
+        margin: 20px 0;
+        border-radius: 15px;
+        box-shadow: 4px 4px 50px #CE33D4;
+        padding: 20px;
+        overflow-y: scroll;
+    }
+    .container form input {
+        width: 100%;
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+    .container .product {
+        flex-direction: column; /* Stack products vertically */
+        padding: 10px 0; /* Adjust padding for smaller screens */
+    }
+    .container .product img {
+        width: 40px; /* Make images responsive */
+    }
+    .container .product h2 {
+        font-size: 14px; /*Adjust font size for smaller screens */
+        margin-left: 0; /* Reset margin */
+        margin-top: 10px;
+    }
+    /* Additional adjustments for better mobile experience */
+    .product-list {
+        padding: 10px 0;
+    }
+    #right h1 {
+        font-size: 7vw;
+        margin-bottom: 10px;
+    }
+}
+
+/* below is the code for navbar for phone */
+
+
+@media (max-width:600px){
+
+#navforphone{
+    display:block;
+}
+
+}
+#navforphone {
+transform: translateX(-100%);
+}
+
+@media (max-width: 600px) {
+#navforphone {
+  transform: translateX(0); 
+}
+}
+#navforphone {
+width:100%;
+height:100vh;
+/* background-color: red; */
+display: flex;
+align-items:center;
+justify-content: center;
+color:white;
+flex-direction: column;
+text-transform: uppercase;
+display: none;
+transition: transform 1s ease;
+background-color: black;
+transform: translateX(-100%); 
+}
+#navforphone a{
+text-decoration: none;
+color:white;
+}
+
+#navforphone.open {
+display: flex;
+transform: translateX(0);
+}
+#navforphone h3 {
+margin-bottom: 20px;
+}
+.ri-cross-line{
+font-size: 32px;
+color:white;
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="nav1">
+            <img id="logo" src="/images/ayushwebsitewithoutbg.png" alt="image">
+        </div>
+        <div id="nav2">
+              <!-- <h3><button>Signup</button></h3> -->
+        <a href="/" ><h3>Home</h3></a>
+        <a href="about" ><h3>about us</h3></a>
+        <a href="contact"><h3>Contact</h3></a>
+        <a href="store"><h3>Store</h3></a>
+        <a href="signup"><h3>signup</h3></a>
+        <i class="ri-menu-line"></i>
+        </div>
+    </div>
+    <div id="navforphone">
+        <a href="index" ><h3>Home</h3></a>
+        <a href="about"><h3>about us</h3></a>
+        <a href="contact"><h3>Contact</h3></a>
+        <a href="store"><h3>Store</h3></a>
+        <a href="signup"><h3>signup</h3></a>
+    </div>
+    <section class="container">
+     <form action="">
+        <i class="ri-search-line"></i>
+        <input type="text" id="search-items" placeholder="search here" onkeyup="search()">
+     </form>
+
+     <div class="product-list" id="product-list">
+        <a href="iphone13">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/416/416/ktketu80/mobile/2/y/o/iphone-13-mlpk3hn-a-apple-original-imag6vpyur6hjngg.jpeg?q=70" alt="">
+                <h2>APPLE iPhone 13 (Blue, 128 GB)</h2>
+            </div>
+        </a>
+        <a href="./samsunggalaxys23ultra.html">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/k/1/o/-original-imagmg6gz3bsgan7.jpeg?q=70" alt="">
+                <h2>SAMSUNG Galaxy S23 Ultra 5G (Cream, 256 GB)  (12 GB RAM)</h2>
+            </div>
+        </a>
+        <a href="./samsungs23.html">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/1/r/n/-original-imagmg6gyzgzzszt.jpeg?q=70" alt="">
+                <h2>SAMSUNG Galaxy S23 5G (Cream, 256 GB)  (8 GB RAM)</h2>
+            </div>
+        </a>
+        <a href="/store/iphone14">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/3/5/l/-original-imaghx9qmgqsk9s4.jpeg?q=70" alt="">
+                <h2>APPLE iPhone 14 (Blue, 128 GB)</h2>
+            </div>
+        </a>
+        <a href="./iphone14plus.html">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/l/v/8/-original-imaghx9qudmydgc4.jpeg?q=70" alt="">
+                <h2>APPLE iPhone 14 Plus (Starlight, 128 GB)</h2>
+            </div>
+        </a>
+        <a href="./iphone14plus.html">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/l/v/8/-original-imaghx9qudmydgc4.jpeg?q=70" alt="">
+                <h2>APPLE iPhone 14 Plus (Starlight, 128 GB)</h2>
+            </div>
+        </a>
+        <a href="./samsungzflip3.html">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/416/416/ksnjp8w0/mobile/w/u/8/galaxy-z-flip3-5g-sm-f711bzeeinu-samsung-original-imag662adrayy6cg.jpeg?q=70" alt="">
+                <h2>SAMSUNG Galaxy Z Flip3 5G (Cream, 128 GB)  (8 GB RAM)</h2>
+            </div>
+        </a>
+        <a href="./samsungzflip4.html">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/h/e/d/-original-imagh7nnemnbgtts.jpeg?q=70" alt="">
+                <h2>SAMSUNG Galaxy Z Flip4 5G (Pink Gold, 128 GB)  (8 GB RAM)</h2>
+            </div>
+        </a>
+        <a href="./iphone15.html">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/h/d/9/-original-imagtc2qzgnnuhxh.jpeg?q=70" alt="">
+                <h2>APPLE iPhone 15 (Black, 128 GB)</h2>
+            </div>
+        </a>
+        <a href="./iphone15plus.html">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/1/i/x/-original-imagtc6fhhtqjnr9.jpeg?q=70" alt="">
+                <h2>APPLE iPhone 15 Plus (Blue, 128 GB)</h2>
+            </div>
+        </a>
+        <a href="./iphone15pro.html">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/a/r/5/-original-imagtc3kcmph6ax5.jpeg?q=70" alt="">
+                <h2>APPLE iPhone 15 Pro Max (Black Titanium, 256 GB)</h2>
+            </div>
+        </a>
+        <a href="iphone15pro.html">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/9/u/a/-original-imagtc4hsx9mzfra.jpeg?q=70" alt="">
+                <h2>APPLE iPhone 15 Pro (Natural Titanium, 128 GB)</h2>
+            </div>
+        </a>
+        <a href="./iphone14pro.html">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/i/h/c/-original-imaghxemmqyahnuj.jpeg?q=70" alt="">
+                <h2>APPLE iPhone 14 Pro (Gold, 1 TB)</h2>
+            </div>
+        </a>
+        <a href="./samsunggalaxyzflip5.html">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/t/o/b/galaxy-flip5-sm-f731blgains-samsung-original-imagru5pcagms7me.jpeg?q=70" alt="">
+                <h2>SAMSUNG Galaxy Z Flip5 (Mint, 256 GB)  (8 GB RAM)</h2>
+            </div>
+        </a>
+        <a href="./samsunggalaxyzflip5.html">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/u/w/t/galaxy-flip5-sm-f731bliains-samsung-original-imagru5pgwsfnrmq.jpeg?q=70" alt="">
+                <h2>SAMSUNG Galaxy Z Flip5 (Lavender, 512 GB)  (8 GB RAM)
+                </h2>
+            </div>
+        </a>
+        <a href="./samsunggalaxyfold5.html">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/3/2/r/galaxy-fold5-sm-f946blbhins-samsung-original-imagru5ugghfnwnj.jpeg?q=70" alt="">
+                <h2>SAMSUNG Galaxy Z Fold5 (Icy Blue, 256 GB)  (12 GB RAM)</h2>
+            </div>
+        </a>
+        <a href="./samsunggalaxyfold5.html">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/b/x/i/galaxy-fold5-sm-f946bzkdins-samsung-original-imagru9nrhhmd9hz.jpeg?q=70" alt="">
+                <h2>SAMSUNG Galaxy Z Fold5 (Phantom Black, 512 GB)  (12 GB RAM)</h2>
+            </div>
+        </a>
+        <a href="./samsungs22ultra.html">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/w/t/r/-original-imaggj68cgtdacxn.jpeg?q=70" alt="">
+                <h2>SAMSUNG Galaxy S22 Ultra 5G (Phantom Black, 256 GB)  (12 GB RAM)</h2>
+            </div>
+        </a>
+        <a href="./samsungs23fe.html">
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/71Ii1syiYrL._SX679_.jpg" alt="">
+                <h2>Samsung Galaxy S23 FE 5G (Purple, 8GB, 256GB)</h2>
+            </div>
+        </a>
+        <a href="./opporeno10.html">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/9/e/4/-original-imagtcrumzbqj4xd.jpeg?q=70" alt="">
+                <h2>OPPO Reno10 5G (Silvery Grey, 256 GB)  (8 GB RAM)</h2>
+            </div>
+        </a>
+        <a href="./oppoa78.html">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/h/x/a/-original-imagrxbufb6tqzjc.jpeg?q=70" alt="">
+                <h2>OPPO A78 5G (Glowing Black, 128 GB)  (8 GB RAM)
+                </h2>
+            </div>
+        </a>
+        <a href="./vivov29e.html">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/i/u/r/v29e-5g-v2303-vivo-original-imagsrk33hdpksuz.jpeg?q=70" alt="">
+                <h2>vivo V29e 5G (Artistic Blue, 256 GB)  (8 GB RAM)</h2>
+            </div>
+        </a>
+        <a href="./vivov275g.html">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/b/f/m/-original-imagna3ezkdusyrz.jpeg?q=70" alt="">
+                <h2>vivo V27 Pro 5G (Magic Blue, 256 GB)  (8 GB RAM)</h2>
+            </div>
+        </a>
+       <a href="./vivov29pro.html">
+        <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/b/f/m/-original-imagna3ezkdusyrz.jpeg?q=70" alt="">
+            <h2>vivo V27 5G (Magic Blue, 128 GB)  (8 GB RAM)</h2>
+        </div>
+       </a>
+        <!-- <div class="product">
+            <img src="" alt="">
+            <h2></h2>
+        </div> -->
+     </div>
+    </section> 
+    <script>
+        const search = ()=>{
+            const searchbox = document.getElementById("search-items").value.toUpperCase();
+            const storeitems = document.getElementById("product-list");
+            const product = document.querySelectorAll(".product");
+            const pname = document.getElementsByTagName("h2");
+
+            for(let i = 0; i < pname.length ; i++){
+                let match = product[i].getElementsByTagName('h2')[0];
+
+                if(match){
+                   let textvalue = match.textContent || match.innerHTML
+
+                   if(textvalue.toUpperCase().indexOf(searchbox) > -1){
+                      product[i].style.display = "";
+                   }else{
+                    product[i].style.display = "none";
+                   }
+                }
+            }
+        }
+    </script>
+    <script>
+    
+        const nav = document.getElementById('navforphone');
+        
+        function toggleNav() {
+          nav.classList.toggle('open'); 
+        }
+        // Get menu icon and nav elements
+        const menuIcon = document.querySelector('.ri-menu-line'); 
+        // const nav = document.getElementById('navforphone');
+        
+        // Add click event to menu icon
+        menuIcon.addEventListener('click', function() {
+        
+          // Toggle open class on nav 
+          nav.classList.toggle('open');
+        
+          // Toggle display of content
+          const content = document.getElementById('content');
+          content.style.display = content.style.display === 'none' ? 'flex' : 'none'; 
+        
+        });
+        // const menuIcon = document.querySelector('.menu-icon');
+        
+        menuIcon.addEventListener('click', () => {
+        
+          if(menuIcon.classList.contains('ri-menu-line')) {
+            menuIcon.classList.replace('ri-menu-line', 'ri-cross-line');
+          } else {
+            menuIcon.classList.replace('ri-cross-line', 'ri-menu-line'); 
+          }
+          
+          // Toggle menu open/closed
+        
+        });
+        
+        
+        </script>
+</body>
+</html>

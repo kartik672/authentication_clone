@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: black;
+            color:white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            width: 100%;
+            font-weight:600;
+        }
+
+        button {
+            background-color: #CE33D4;
+            color: #fff;
+            font-weight:700;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Media Queries */
+        @media only screen and (max-width: 600px) {
+            /* Styles for phones */
+            .container {
+                width: 90%;
+            }
+        }
+
+        @media only screen and (min-width: 601px) and (max-width: 1024px) {
+            /* Styles for tablets and small laptops */
+            .container {
+                width: 70%;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) {
+            /* Styles for laptops and larger screens */
+            .container {
+                width: 50%;
+            }
+        }
+        #thank-you-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+select {
+    width: 50%;
+    padding: 7px;
+    border: 4px solid #CE33D4;
+    border-radius: 4px;
+    background-color: black;
+    font-size: 16px;
+    color: white;
+}
+    </style>
+    <title>Buy Now Page</title>
+
+</head>
+<body>
+    <div class="container">
+      
+        <form action="/store/iphone14/buy" method="post" id="order-form">
+            <h1 style="color:#CE33D4">Checkout Form</h1>
+            <!-- <label for="fullname">Full Name:</label> -->
+            <input type="text" id="fullname" name="fullname" required placeholder="Full name">
+
+            <!-- <label for="address">Address:</label> -->
+            <textarea id="address" name="address" rows="4" required placeholder="Enter your address here"></textarea>
+
+            <!-- <label for="pincode">Pin Code:</label> -->
+            <input type="text" id="pincode" name="pincode" required placeholder="Pin code">
+
+            <!-- <label for="email">Email:</label> -->
+            <input type="email" id="email" name="email" required placeholder="Email">
+
+            <!-- <label for="phone_number">Phone Number:</label> -->
+            <input type="text" id="phone" name="phone" required placeholder="Phone number">
+
+            <!-- <label for="quantity">Quantity:</label> -->
+            <input type="number" id="quantity" name="quantity" required placeholder="Quantity">
+            <br>
+            <div id="total-amount">
+                <h3>Total Amount: </h3>
+                <p id="amount"></p>
+            </div>
+
+            <label for="payment">Payment</label>
+            <select name="payment" id="payment">
+                <option value="cod">Cash On Delivery</option>  
+                <option value="upi">UPI</option>
+                <option value="bank_transfer">Bank Transfer</option>
+            </select>
+
+            <div id="upi-details" style="display: none; border: 2px solid #CE33D4; padding:10px;margin-top:10px">
+                <h1>Pay us through UPI</h1>
+                <p>UPI ID: ayush2k316-2@okicic</p>
+                <p>Or scan the QR to pay</p>
+                <img style="width:300px;" src="./WhatsApp Image 2023-11-23 at 22.25.36_34716690.jpg" alt="">
+                <h3>Enter your transaction id below</h3>
+                <input type="text" id="transaction-id" name="transaction_id"  placeholder="transaction-id">
+            </div>
+
+            <div id="bank-transfer-details" style="display: none; border: 2px solid #CE33D4; padding:10px;margin-top:10px">
+                <h1 style="text-transform:uppercase;text-decoration: underline; text-decoration-color: #CE33D4;">Pay us through Bank Transfer</h1>
+                <p>Bank Name: IDFC Bank</p>
+                <p>Account Number: 10150625164</p>
+                <p>IFSC Code: IDFB022051</p>
+                <p>Enter your transaction id below</p>
+                <input type="text" id="transaction-id" name="transaction_id"  placeholder="transaction-id">
+            </div>
+            <br><br>
+
+            <button type="submit" id="place-order-button">Place Order</button>
+            
+            </div>
+            
+        </form>
+    </div>
+    <div id="thank-you-message" style="display: none;">
+        <h1>Thank you for placing the order.</h1>
+        <p>We will reach out to you soon.</p>
+    </div>
+    <script>
+        document.querySelector('#payment').addEventListener('change', function(event) {
+            document.querySelector('#upi-details').style.display = 'none';
+            document.querySelector('#bank-transfer-details').style.display = 'none';
+
+            if (event.target.value === 'upi') {
+                document.querySelector('#upi-details').style.display = 'block';
+            } else if (event.target.value === 'bank_transfer') {
+                document.querySelector('#bank-transfer-details').style.display = 'block';
+            }
+        });
+    </script>
+    <script>
+        // this code is for when the user will click on the respective fields the respective details will be shown and the form will
+        // not be prevented from submitting
+        document.querySelector('#payment').addEventListener('change', function(event) {
+            document.querySelector('#upi-details').style.display = 'none';
+            document.querySelector('#bank-transfer-details').style.display = 'none';
+
+            // Remove the 'required' attribute from both 'transaction_id' fields
+            document.querySelector('#upi-details input[name="transaction_id"]').required = false;
+            document.querySelector('#bank-transfer-details input[name="transaction_id"]').required = false;
+
+            if (event.target.value === 'upi') {
+                document.querySelector('#upi-details').style.display = 'block';
+                // Add the 'required' attribute to the 'transaction_id' field in the 'upi-details' div
+                document.querySelector('#upi-details input[name="transaction_id"]').required = true;
+            } else if (event.target.value === 'bank_transfer') {
+                document.querySelector('#bank-transfer-details').style.display = 'block';
+                // Add the 'required' attribute to the 'transaction_id' field in the 'bank-transfer-details' div
+                document.querySelector('#bank-transfer-details input[name="transaction_id"]').required = true;
+            }
+        });
+    </script>
+</body>
+</html>

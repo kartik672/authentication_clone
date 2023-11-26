@@ -1,0 +1,232 @@
+*{
+    padding:0px;
+    margin:0px;
+    background-color: black;
+}
+html,body{
+    height:100%;
+    width:100%;
+    box-sizing: border-box;
+}
+#main{
+    height:100%;
+    width:100%;
+    background-color:black;
+}
+#navbar{
+    height:120px;
+    width:100%;
+    background-color:black;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    color:white;
+    border-bottom:2px solid #dadada;
+    font-size:1vw;
+}
+#nav1 img{
+    width:100px;
+}
+#nav2{
+    display:flex;
+    gap:98px;
+    /* margin-right:10px; */
+    text-transform: uppercase;
+    padding:2.5vw;
+    
+}
+#nav2 h3:hover{
+    color:rgb(237, 51, 150);
+}
+#nav1{
+    margin-left:30px;
+}
+#left{
+    height:100%;
+    width:50%;
+    background-color:black;
+    /* display:flex; */
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding:1.5vw;
+}
+#left img{
+    width:55%;
+    /* margin-left:10vw; */
+}
+#right{
+    width:50%;
+    height:100%;
+    background-color: black;
+    padding:1.5vw;
+    color:white;
+    font-family:'Quicksand';
+    
+}
+#content{
+    width:100%;
+    height:calc(100% - 135px);
+    display:flex;
+}
+#right p{
+    font-size:1.2vw;
+    font-weight:100;
+}
+#right h1{
+    font-size:4vw;
+    font-weight:700;
+    margin-bottom:2.5vw;
+    text-decoration: none;
+    line-height:2.5vw;
+}
+#nav2 a{
+    text-decoration:none;
+    color:white;
+}
+.ri-menu-line{
+    display:none;
+}
+#right h1{
+    text-decoration:underline;
+    text-decoration-color: #CE33D4;
+}
+@media (max-width:600px){
+
+    #navbar{
+        height:80px;
+        
+    }
+    #nav1{
+        justify-content: space-between;
+    }
+    #nav2 a{
+        display:none;
+
+    }
+    .ri-menu-line{
+        display:block;
+        font-size:8vw;
+        display: flex;
+        align-items:center;
+        justify-content:flex-end;
+    }
+   #nav1 img{
+    width:60px;
+   }
+    #content{
+        flex-direction: column;
+        /* position: relative; */
+    }
+    #left{
+        width:100%;
+        height:60%;
+        padding:1vw;
+        /* position: absolute; */
+        
+        
+    }
+    
+    #right{
+        width:90%;
+        height:40%;
+        /* padding-right:2vw; */
+        margin:0;
+        /* position:absolute; */
+        bottom:0px;
+        padding-right:3vw;
+      padding-left:2.5vw;
+        /* font-size:3vw; */
+      /* overflow-x: hidden; */
+      
+    }
+    #right p{
+      font-size:medium;
+    }
+  #right h1{
+    font-size:7vw;;
+    margin-bottom: 5vw;
+  }
+    
+    #page2 #heading h1{
+        font-size:7.5vw;
+        font-weight:600;
+    }
+    #heading {
+        height: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+      }
+      #content{
+        flex-direction: column;
+      }
+      #left img{
+        left: 100px;
+      }
+      /*to maintain a distance between heading AND brands padding is given*/
+      
+      
+}
+
+
+
+
+
+
+
+/* below is the code for nav bar for phone  */
+
+
+
+@media (max-width:600px){
+
+    #navforphone{
+        display:block;
+    }
+
+}
+#navforphone {
+    transform: translateX(-100%);
+  }
+  
+  @media (max-width: 600px) {
+    #navforphone {
+      transform: translateX(0); 
+    }
+  }
+  #navforphone {
+    width:100%;
+    height:100vh;
+    /* background-color: red; */
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    color:white;
+    flex-direction: column;
+    text-transform: uppercase;
+    display: none;
+    transition: transform 1s ease;
+    background-color: black;
+    transform: translateX(-100%); 
+  }
+  #navforphone a{
+    text-decoration: none;
+    color:white;
+  }
+  
+  #navforphone.open {
+    display: flex;
+    transform: translateX(0);
+  }
+  #navforphone h3 {
+    margin-bottom: 20px;
+  }
+  .ri-cross-line{
+    font-size: 32px;
+    color:white;
+  }
+  
+
+  

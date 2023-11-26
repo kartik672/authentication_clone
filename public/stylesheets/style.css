@@ -1,0 +1,352 @@
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:'montserrat';
+}
+html,body{
+    height:100%;
+    width:100%;
+}
+#main{
+    height:100%;
+    width:100%;
+}
+#navbar{
+    height:120px;
+    width:100%;
+    background-color:black;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    /* position:fixed; */
+    font-size:1vw;
+    border-bottom:2px solid #dadada;
+}
+#nav1{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    padding:2vw;
+    text-transform: uppercase;
+}
+#nav2{
+    display:flex;
+    align-items:center;
+    padding:2.5vw;
+    justify-content:flex-start;
+    gap:98px;
+    text-transform: uppercase;
+
+}
+#logo{
+    width:100px;
+}
+#content{
+    height:100%;
+    width:100%;
+    display:flex;
+    background-color: black;
+}
+#left {
+    height:100%;
+    width:40%;
+    padding:4vw;
+
+}
+#right{
+    height:100%;
+    width:60%;
+    /* padding:3vw; */
+    margin-left: 10px;
+    padding-left:100px;
+
+
+}
+span{
+    color:#CE33D4;
+}
+#left h1{
+    font-size:7vw;
+    line-height:8vw;
+    color:white;
+}
+p{
+    font-size:3vw;
+    margin-top:2vw;
+    color:white;
+}
+#right img{
+    width:80%;
+}
+button{
+    font-size:1.5vw;
+    padding:1vw;
+    background-color:#CE33D4;
+    color:white;
+    font-weight:700;
+    margin-top:1.5vw;
+    border-radius:1vw;
+}
+.ri-menu-line{
+    display:none;
+}
+#right img{
+    width:550px;
+    margin-top:100px;
+    margin-left:100px;
+}
+#right #discountvideo{
+    height:100px;
+    width:100%;
+}
+#page2{
+    height:100%;
+    width:100%;
+    background-color: black;
+    color:white;
+}
+#Apple,#Samsung,#one-plus,#realme,#redmi,#oppo{
+    width:200px;
+    height:200px;
+    background-color:white;
+}
+#brands{
+    height:80%;
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* align-items: center; */
+    /* position: absolute; */
+    border-radius: 2vw;;
+}
+#heading{
+    height:80px;
+    width:100%;
+    /* background-color: red; */
+    display:flex;
+    justify-content: center;
+    font-size:2vw;
+    position: absolute;
+}
+#Apple img{
+    width:100%;
+    height:59;
+    margin-top:px;
+}
+#Samsung img{
+    width:100%;
+    height:59;
+    margin-top:2px; 
+}
+#realme img{
+    width:100%;
+    height:59;
+    margin-top:px; 
+}
+#one-plus img{
+    width:100%;
+    height:59;
+    margin-top:0px;  
+}
+#redmi img{
+    width:100%;
+    height:13vw;
+    margin-top:0.7px;
+}
+#oppo img{
+    width:100%;
+    height:59;
+    margin-top:2px; 
+}
+/* below code ki wjh se j logo hai vo ubhar rahe hai */
+#Apple:hover img,
+#Samsung:hover img,
+#realme:hover img,
+#one-plus:hover img,
+#redmi:hover img, 
+#oppo:hover img {
+  transform: scale(1.1);
+  transition: transform 0.3s ease; 
+}
+
+@media (max-width:600px){
+
+    #navbar{
+        height:80px;
+        
+    }
+    #nav1{
+        justify-content: space-between;
+    }
+    #nav2 a{
+        display:none;
+
+    }
+    .ri-menu-line{
+        display:block;
+        font-size:8vw;
+        display: flex;
+        align-items:center;
+        justify-content:flex-end;
+    }
+    #logo{
+        width:60px
+    }
+    #content{
+        flex-direction: column;
+    }
+    #left{
+        width:100%;
+        height:40%;
+        padding:6vw;
+    }
+    #left h1{
+        font-size:15vw;
+        line-height:17vw
+    }
+    #left p{
+        font-size:5vw;
+    }
+    #left button{
+        font-size:4vw;
+        margin-top:4vw
+    }
+    #right{
+        width:100%;
+        height:60%;
+        padding-left:0;
+        /* padding-right:2vw; */
+        margin:0;
+    }
+    #page2 #heading h1{
+        font-size:7.5vw;
+        font-weight:600;
+    }
+    #heading {
+        height: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+      }
+      /*to maintain a distance between heading AND brands padding is given*/
+      
+      #brands {
+        height: calc(100% - 40px); 
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-top: 30px; 
+      }
+      
+      #Apple,
+      #Samsung,
+      #one-plus,
+      #realme,
+      #redmi,
+      #oppo {
+        width: 80px;
+        height: 80px;
+        background-color: white;
+        margin: 10px auto; /* Add margin to create space between brand elements */
+      }
+      #redmi img{
+        width:100%;
+        height:22.1vw;
+        margin-top:0.7px;
+      }
+        #Apple:hover img,
+        #Samsung:hover img,
+        #realme:hover img,
+        #one-plus:hover img,
+        #redmi:hover img, 
+        #oppo:hover img {
+         transform: scale(1.1);
+         transition: transform 0.3s ease; 
+      }
+      button:hover{
+        background-color:white;
+        color:#CE33D4;
+      }
+      #discountvideo{
+        margin-top:70px;
+      }
+        #right img{
+            width:80%;
+            margin-top:0px;
+            margin-left:30px;
+        }
+      
+}
+a{
+    text-decoration:none;
+    color:white;
+}
+#nav2 a:hover {
+    color: #CE33D4; 
+}
+button:hover{
+    background-color:white;
+    color:#CE33D4;
+}
+
+
+
+
+/* below is the code for nav bar for phone  */
+
+
+
+@media (max-width:600px){
+
+    #navforphone{
+        display:block;
+    }
+
+}
+#navforphone {
+    transform: translateX(-100%);
+  }
+  
+  @media (max-width: 600px) {
+    #navforphone {
+      transform: translateX(0); 
+    }
+  }
+  #navforphone {
+    width:100%;
+    height:100vh;
+    /* background-color: red; */
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    color:white;
+    flex-direction: column;
+    text-transform: uppercase;
+    display: none;
+    transition: transform 1s ease;
+    background-color: black;
+    transform: translateX(-100%); 
+  }
+  #navforphone a{
+    text-decoration: none;
+    color:white;
+  }
+  
+  #navforphone.open {
+    display: flex;
+    transform: translateX(0);
+  }
+  #navforphone h3 {
+    margin-bottom: 20px;
+  }
+  .ri-cross-line{
+    font-size: 32px;
+    color:white;
+  }
+  

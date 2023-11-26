@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush-website</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:'montserrat';
+}
+html,body{
+    height:100%;
+    width:100%;
+    background-color: black;
+}
+#main{
+    height:100%;
+    width:100%;
+    background-color: black;
+}
+#navbar{
+    height:120px;
+    width:100%;
+    background-color:black;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    /* position:fixed; */
+    font-size:1vw;
+    border-bottom:2px solid #dadada;
+}
+#nav1{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    padding:2vw;
+    text-transform: uppercase;
+}
+#nav2{
+    display:flex;
+    align-items:center;
+    padding:2.5vw;
+    justify-content:flex-start;
+    gap:98px;
+    text-transform: uppercase;
+
+}
+#logo{
+    width:100px;
+}
+.ri-menu-line{
+    display:none;
+}
+
+
+@media (max-width:600px){
+
+    #navbar{
+        height:80px;
+        
+    }
+    #nav1{
+        justify-content: space-between;
+    }
+    #nav2 a{
+        display:none;
+
+    }
+    .ri-menu-line{
+        display:block;
+        font-size:8vw;
+        display: flex;
+        align-items:center;
+        justify-content:flex-end;
+    }
+    #logo{
+        width:60px
+    }
+      button:hover{
+        background-color:white;
+        color:#CE33D4;
+      }
+     
+}
+a{
+    text-decoration:none;
+    color:white;
+}
+#nav2 a:hover {
+    color: #CE33D4; 
+}
+button:hover{
+    background-color:white;
+    color:#CE33D4;
+}
+
+
+
+
+/* below is the code for nav bar for phone  */
+
+
+
+@media (max-width:600px){
+
+    #navforphone{
+        display:block;
+    }
+
+}
+#navforphone {
+    transform: translateX(-100%);
+  }
+  
+  @media (max-width: 600px) {
+    #navforphone {
+      transform: translateX(0); 
+    }
+  }
+  #navforphone {
+    width:100%;
+    height:100vh;
+    /* background-color: red; */
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    color:white;
+    flex-direction: column;
+    text-transform: uppercase;
+    display: none;
+    transition: transform 1s ease;
+    background-color: black;
+    transform: translateX(-100%); 
+  }
+  #navforphone a{
+    text-decoration: none;
+    color:white;
+  }
+  
+  #navforphone.open {
+    display: flex;
+    transform: translateX(0);
+  }
+  #navforphone h3 {
+    margin-bottom: 20px;
+  }
+  .ri-cross-line{
+    font-size: 32px;
+    color:white;
+  }
+   #page1{
+    width:100%;
+    height:calc(100% - 120px);
+    background-color: black;
+    display: flex;
+  } 
+  #images{
+    width:40%;
+    height:100%;
+    /* background-color: #CE33D4; */
+    display: flex;
+  }
+  #small-images{
+    width:30%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    padding-left:30px;
+    padding-top: 20px;
+    gap:10px
+  }
+  #small-images img{
+    width:100px;
+    height:100px;
+  }
+  #small-images img:hover{
+    cursor: pointer;
+  }
+  #small-images img[class="img1"]{
+    height:125px
+  }
+  #main-image{
+    width:70%;
+    height:100%;
+    padding-left:20px;
+    padding-top:60px;
+  }
+  #details{
+    width:60%;
+    height:100%;
+    background-color: black;
+    color:white;
+    padding-top:60px
+  }
+
+
+
+  #details h1{
+    margin-top:20px;
+    color:white;
+    font-size: 40px;
+  }
+
+  #rating{
+    display:inline-block;
+    background-color: green;
+    color: white;
+  }
+  #pricing{
+    display:flex;
+    color:white;
+
+  }
+  #pricing strike{
+    margin-top:40px;
+    margin-left:10px;
+    color:rgb(184, 169, 169);
+    font-size:20px
+  }
+  #pricing p{
+    margin-top:40px;
+    margin-left:10px;
+    color:green;
+    font-weight:800;
+  }
+  @media (max-width:600px){
+    #page1{
+      flex-direction: column;
+    }
+    #images{
+      width:100%;
+      height:50%;
+    }
+    #small-images{
+      width:30%;
+      flex-direction: column;
+      padding-left:20px;
+      padding-top: 10px;
+      gap:10px;
+    }
+    #small-images img{
+      width:50%;
+      height:auto;
+    }
+    #small-images img:hover{
+      cursor: pointer;
+    }
+    #small-images img[class="img1"]{
+      height:70px;
+      
+    }
+    #main-image{
+      width:70%;
+      height:50%;
+      padding-left:10px;
+      padding-top:35px;
+    }
+    #details{
+      width:100%;
+      height:50%;
+      background-color: black;
+      padding-top:0;
+      padding-left:10px;
+    }
+    #main-image img{
+      width:180px;
+    }
+    #details h1{
+    font-size: 20px;
+    margin-top:25px;
+    
+  }
+  #pricing{
+    margin-bottom:10px
+  }
+  #pricing strike{
+    margin-top:25px;
+    
+  }
+  #pricing p{
+    margin-top:25px;
+  }
+
+  }
+ #buy{
+  width:130px;
+  height:60px;
+  border:0;
+  color:white;
+  background-color: #CE33D4;
+  display: flex;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+
+ }
+ #Warranty{
+  margin-bottom:13px;
+  margin-top:13px
+ }
+ #rating{
+  margin-top:10px
+ }
+ #color-storage{
+   margin-top:20px;
+ }
+  #color{
+    display: flex;
+    gap:10px;
+  }
+  #color img{
+    width:50px;
+    height:auto;
+  
+  }
+  #storage {
+    margin-top: 20px;
+  }
+
+  #storage label {
+    margin-right: 10px;
+  }
+
+  #storage input[type="radio"] {
+    margin-right: 5px;
+  }
+
+  
+
+  </style>
+</head>
+<body>
+<div id="main">
+    <div id="navbar">
+        <div id="nav1">
+            <img id="logo" src="./ayushwebsitewithoutbg.png" alt="image">
+           
+            
+        </div>
+        <div id="nav2">
+            <!-- <h3><button>Signup</button></h3> -->
+            <a href="index.html" ><h3>Home</h3></a>
+            <a href="about.html"><h3>about us</h3></a>
+            <a href="contact.html"><h3>Contact</h3></a>
+            <a href="store.html"><h3>Store</h3></a>
+            <a href="signup.html"><h3>signup</h3></a>
+            <i class="ri-menu-line"></i>
+        </div>
+    </div>
+    <div id="navforphone">
+        <a href="index.html" ><h3>Home</h3></a>
+        <a href="about.html"><h3>about us</h3></a>
+        <a href="contact.html"><h3>Contact</h3></a>
+        <a href="store.html"><h3>Store</h3></a>
+        <a href="signup.html"><h3>signup</h3></a>
+    </div>
+    <div id="page1">
+        <div id="images">
+            <div id="small-images">
+                <img src="https://rukminim2.flixcart.com/image/416/416/ktketu80/mobile/2/y/o/iphone-13-mlpk3hn-a-apple-original-imag6vpyur6hjngg.jpeg?q=70" class="img1" alt="">
+                <img src="https://rukminim2.flixcart.com/image/416/416/ktketu80/mobile/q/h/8/iphone-13-mlpk3hn-a-apple-original-imag6vpywdtyhbkr.jpeg?q=70" class="img2" alt="">
+                <img src="https://rukminim2.flixcart.com/image/416/416/ktketu80/mobile/t/e/e/iphone-13-mlpk3hn-a-apple-original-imag6vpyggrjkms3.jpeg?q=70" class="img3" alt="">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/h/e/g/-original-imagh7g8k7ttcdkc.jpeg?q=70" class="img4" alt="">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/w/k/h/-original-imagh2gwxu57j4fn.jpeg?q=70" class="img5" alt="">
+               
+                
+            </div>
+            <div id="main-image">
+                <img src="https://rukminim2.flixcart.com/image/416/416/ktketu80/mobile/2/y/o/iphone-13-mlpk3hn-a-apple-original-imag6vpyur6hjngg.jpeg?q=70" class="imgchanger" alt="">
+            </div>
+        </div>
+
+        <div id="details">
+            <h1 id="heading">APPLE iPhone 13 (Blue, 128 GB)</h1>
+            <div id="rating">
+              <p>4.7<i class="ri-star-fill"></i></p>
+            </div>
+            <div id="pricing">
+              <h1>&#8377; 51,000</h1>
+              <strike>51,999</strike>
+              <!-- <p>11% off</p> -->
+            </div>
+            <p id="Warranty">1 Year Warranty for Phone and 6 Months Warranty for In-Box Accessories</p>
+            <div id="buy">
+              <i class="ri-shopping-cart-2-line"></i>
+              <button id="buy"><a href="./buy.html">Buy Now</a></button>
+          </div>
+          <div id="color-storage">
+            <div id="color">
+              <h2>color:</h2>
+               <img src="https://rukminim2.flixcart.com/image/416/416/ktketu80/mobile/2/y/o/iphone-13-mlpk3hn-a-apple-original-imag6vpyur6hjngg.jpeg?q=70" alt="">
+               <img src="https://rukminim2.flixcart.com/image/416/416/ktketu80/mobile/6/n/d/iphone-13-mlpg3hn-a-apple-original-imag6vpyghayhhrh.jpeg?q=70" alt="">
+               <img src="https://rukminim2.flixcart.com/image/416/416/ktketu80/mobile/s/l/c/iphone-13-mlpf3hn-a-apple-original-imag6vzz5qvejz8z.jpeg?q=70" alt="">
+               <img src="https://rukminim2.flixcart.com/image/416/416/l0igvww0/mobile/r/q/m/-original-imagca5ajerqpfjy.jpeg?q=70" alt="">
+            </div>
+            <div id="storage">
+              <h2>Storage:</h2>
+              <label>
+                <input type="radio" name="storage" value="128GB"> 128GB
+              </label>
+              <label>
+                <input type="radio" name="storage" value="256GB"> 256GB
+              </label>
+              <label>
+                <input type="radio" name="storage" value="512GB"> 512GB
+              </label>
+            </div>
+          </div>
+          
+        </div>
+    </div>
+
+
+</div>
+<script>
+    
+const nav = document.getElementById('navforphone');
+
+function toggleNav() {
+  nav.classList.toggle('open'); 
+}
+// Get menu icon and nav elements
+const menuIcon = document.querySelector('.ri-menu-line'); 
+// const nav = document.getElementById('navforphone');
+
+// Add click event to menu icon
+menuIcon.addEventListener('click', function() {
+
+  // Toggle open class on nav 
+  nav.classList.toggle('open');
+
+  // Toggle display of content
+  const content = document.getElementById('content');
+  content.style.display = content.style.display === 'none' ? 'flex' : 'none'; 
+
+});
+// const menuIcon = document.querySelector('.menu-icon');
+
+menuIcon.addEventListener('click', () => {
+
+  if(menuIcon.classList.contains('ri-menu-line')) {
+    menuIcon.classList.replace('ri-menu-line', 'ri-cross-line');
+  } else {
+    menuIcon.classList.replace('ri-cross-line', 'ri-menu-line'); 
+  }
+  
+  // Toggle menu open/closed
+
+});
+
+
+</script>
+<script>
+  // Change main image on hover over small images
+  let smallImages = document.querySelectorAll('#small-images img');
+  let mainImage = document.querySelector('#main-image .imgchanger');
+  let originalSrc = mainImage.src;
+
+  smallImages.forEach(img => {
+    img.addEventListener('mouseover', function() {
+      originalSrc = mainImage.src;
+      mainImage.src = this.src;
+      mainImage.style.width = '400px';
+    });
+
+    img.addEventListener('mouseout', function() {
+      mainImage.src = originalSrc;
+      mainImage.style.width = '300px';
+    });
+  });
+
+  // Change main image and heading on click of color images
+  let colorImages = document.querySelectorAll('#color img');
+  let heading = document.querySelector('#heading');
+
+  colorImages.forEach(img => {
+    img.addEventListener('click', function() {
+      mainImage.src = this.src;
+      originalSrc = this.src;
+      let color = this.src.split('-')[1]; // assuming color is in the src
+      let storage = document.querySelector('input[name="storage"]:checked')?.value || '128GB';
+      heading.textContent = `APPLE iPhone 14 (${color}, ${storage})`;
+    });
+  });
+
+  // Change heading on click of storage radio buttons
+  let storageOptions = document.querySelectorAll('#storage input');
+
+  storageOptions.forEach(option => {
+    option.addEventListener('click', function() {
+      let storage = this.value;
+      let color = document.querySelector('#color img').src.split('-')[1]; // assuming color is in the src
+      heading.textContent = `APPLE iPhone 14 (${color}, ${storage})`;
+    });
+  });
+</script>
+</body>
+</html>

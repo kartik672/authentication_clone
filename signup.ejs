@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush-website</title>
+    <link rel="stylesheet" href="signup.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/589e671e3e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="main">
+    <div id="navbar">
+        <div id="nav1">
+            <img id="logo" src="./ayushwebsitewithoutbg.png" alt="image">
+           
+            
+        </div>
+        <div id="nav2">
+            <!-- <h3><button>Signup</button></h3> -->
+            <a href="index.html" ><h3>Home</h3></a>
+            <a href="about.html"><h3>about us</h3></a>
+            <a href="contact.html"><h3>Contact</h3></a>
+            <a href="store.html"><h3>Store</h3></a>
+            <a href="signup.html"><h3>signup</h3></a>
+            <i class="ri-menu-line"></i>
+        </div>
+    </div>
+    <div id="navforphone">
+        <a href="index.html" ><h3>Home</h3></a>
+        <a href="about.html"><h3>about us</h3></a>
+        <a href="contact.html"><h3>Contact</h3></a>
+        <a href="store.html"><h3>Store</h3></a>
+        <a href="signup.html"><h3>signup</h3></a>
+    </div>
+    <div class="container">
+        <div id="videocontainer">
+            <video autoplay loop muted src="./cuttedoffervideo.mp4"></video>
+        </div>
+        <div class="form-box">
+            <h1 id="title">Signup</h1>
+            <form action="">
+                <div class="input-container">
+                    
+                    <div class="input" id="name-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="username">
+                    </div>
+                 
+                    <div class="input">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+
+                    <div class="input">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="password">
+                    </div>
+                
+                </div>
+                <div class="button-field">
+                    <button type="submit" id="signupbtn">sign up</button>
+                    <!-- <button type="button" id="signinbtn" class="disable">sign in</button> -->
+                </div> 
+            </form>
+        </div>
+        <div id="logocontainer">
+            <img src="./ayushwebsitewithoutbg.png" alt="">
+        </div>
+    </div>
+    
+</div>
+<script src="signup.js"></script>
+<script>
+    
+    const nav = document.getElementById('navforphone');
+    
+    function toggleNav() {
+      nav.classList.toggle('open'); 
+    }
+    // Get menu icon and nav elements
+    const menuIcon = document.querySelector('.ri-menu-line'); 
+    // const nav = document.getElementById('navforphone');
+    
+    // Add click event to menu icon
+    menuIcon.addEventListener('click', function() {
+    
+      // Toggle open class on nav 
+      nav.classList.toggle('open');
+    
+      // Toggle display of content
+      const content = document.getElementById('content');
+      content.style.display = content.style.display === 'none' ? 'flex' : 'none'; 
+    
+    });
+    // const menuIcon = document.querySelector('.menu-icon');
+    
+    menuIcon.addEventListener('click', () => {
+    
+      if(menuIcon.classList.contains('ri-menu-line')) {
+        menuIcon.classList.replace('ri-menu-line', 'ri-cross-line');
+      } else {
+        menuIcon.classList.replace('ri-cross-line', 'ri-menu-line'); 
+      }
+      
+      // Toggle menu open/closed
+    
+    });
+    
+    
+    </script>
+</body>
+</html>
